@@ -47,10 +47,10 @@ public class Main {
 		CoinShape triangleCoin1 = new TriangleCoin(3, 4, 3);
 		System.out.println("Real value of triangleCoin1: " + triangleCoin1.realValue());
 
-		CoinShape triangleCoin2 = new TriangleCoin(2, 7, 2);
+		CoinShape triangleCoin2 = new TriangleCoin(4, 7, 5);
 		System.out.println("Real value of triangleCoin2: " + triangleCoin2.realValue());
 
-		CoinShape triangleCoin3 = new TriangleCoin(3, 19, 5);
+		CoinShape triangleCoin3 = new TriangleCoin(13, 19, 15);
 		System.out.println("Real value of triangleCoin3: " + triangleCoin3.realValue());
 
 		System.out.println("______________________________________________________");

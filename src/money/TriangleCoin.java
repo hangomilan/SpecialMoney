@@ -8,22 +8,19 @@ public class TriangleCoin implements CoinShape {
 
 	private final double value = 1;
 
+	protected boolean isValid(double a, double b, double c) {
+		return ((a + b > c) && (a + c > b) && (b + a > c));
+	}
+
 	public TriangleCoin(double a, double b, double c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
-		if (!isValid()) {
-			try {
-				throw new Exception();
-			} catch (Exception e) {
-				System.out.println("Invalid parameters!");
-			}
+		if (!isValid(a, b, c)) {
+			throw new IllegalArgumentException("Invalid parameter");
+		}else{
+			this.a = a;
+			this.b = b;
+			this.c = c;
 		}
 	}
-	
-	private boolean isValid() {
-        return ((a + b > c) && (a + c > b) && (b + a > c));
-    }
 
 	@Override
 	public double area(){
